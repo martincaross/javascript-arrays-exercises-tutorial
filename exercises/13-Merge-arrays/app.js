@@ -4,6 +4,14 @@ let chunkTwo = [ 'Lucas', 'Jake', 'Scott', 'Amy', 'Molly', 'Hannah', 'Lucas' ];
 const mergeArrays = (firstArray, secondArray) => {
     let newArray = []
     // Your code here
+    for (let i = 0; i < (firstArray.length + secondArray.length); i++){
+        if(i < firstArray.length){
+            newArray.push(firstArray[i])
+        } else {
+            newArray.push(secondArray[i-firstArray.length])
+        }
+    
+    }
     return newArray
 }
 

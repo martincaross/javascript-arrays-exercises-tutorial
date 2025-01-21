@@ -10,15 +10,23 @@ let allColors = [
 
 function generateLI(color) {
 	// Your code here
+	return `<li>${color.label}</li>`;
+	
 }
+
 
 function filterColors(color) {
 	// Your code here
+	let Filtered = color.filter(function(sexy) {
+		return sexy.sexy === true;
+	});
+	return Filtered
 }
+
 
 function generateHTMLFromArray(array) {
 	
-	let filteredOptions = array.filter((filterColors));
+	let filteredOptions = filterColors(array); 
 	let LIs = filteredOptions.map(generateLI);
 
 	let htmlString = '<ul>';
